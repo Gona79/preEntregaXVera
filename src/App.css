@@ -1,0 +1,16 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Asegúrate de que el contenedor ocupe al menos la altura completa de la ventana del navegador */
+}
+
+.container {
+    flex: 1;
+    /* Permite que el contenedor crezca y tome el espacio disponible */
+    display: flex;
+    align-items: center;
+    /* Centra verticalmente */
+    justify-content: center;
+    /* Centra horizontalmente */
+}

@@ -1,0 +1,44 @@
+/* src/components/NavBar.css */
+
+.nav-centered {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-center {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; /* Ocupa el espacio máximo disponible */
+}
+
+/* Espaciado y tamaño del ícono del carrito */
+.nav-centered Nav:last-child {
+    margin-right: 20px; /* Espaciado del margen derecho */
+}
+
+.fa-shopping-cart {
+    font-size: 24px; /* Tamaño del ícono del carrito */
+    margin-right: 5px; /* Espaciado entre el ícono y el badge */
+}
+
+/* Separación entre los elementos del menú */
+.menu-center .nav-link {
+    margin-left: 15px;  /* Espaciado izquierdo */
+    margin-right: 15px; /* Espaciado derecho */
+}
+
+/* Para pantallas medianas y pequeñas, cambiará el comportamiento del menú */
+@media (max-width: 991.98px) {
+    .menu-center {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .menu-center {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* Separación vertical entre los enlaces */
+    }
+}

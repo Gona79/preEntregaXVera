@@ -1,14 +1,19 @@
-import './App.css'; // Importando los estilos
+import './App.css';
 import NavBar from './components/navbar/NavBar';
-import ItemListContainer from './components/itemlistcontainer/ItemListContainer.jsx';
+import ItemListContainer from './components/itemlistcontainer/ItemListContainer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Importar componentes de react-router-dom
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <ItemListContainer greeting="Bienvenido a Alfa y Omega Estética 🌸" />
-      {/* Aquí puedes agregar más componentes según lo necesites */}
-    </div>
+    <Router>
+      <div className="App">
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<ItemListContainer greeting="Bienvenido a Alfa y Omega Estética 🌸" />} />
+          {/* Aquí puedes agregar más rutas según lo necesites */}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

@@ -1,4 +1,3 @@
-
 # Alfa y Omega Estética 🌸
 
 Bienvenido al repositorio del proyecto e-commerce de Alfa y Omega Estética. Nos especializamos en brindar servicios de depilación, masajes y tratamientos corporales. Además, ofrecemos productos de belleza asociados y aparatos especializados. No solo eso, sino que también brindamos la oportunidad de aprender a través de nuestros cursos y seminarios diseñados para profesionales esteticistas.
@@ -28,31 +27,31 @@ Buscamos ofrecer una experiencia de usuario única con una **interfaz limpia y s
 Este proyecto es un trabajo en progreso que culminará en un e-commerce funcional y elegante. El proceso de desarrollo está organizado en diferentes etapas de preentrega y culminará en un producto final integral.
 
 ### Primera Pre-Entrega
+[Descripción de la primera pre-entrega...]
 
-#### NavBar Component:
-- Crear una carpeta `components` dentro de `src`.
-- Implementar el componente `NavBar` en el archivo `NavBar.js`.
-  - Debe renderizar una barra de menú.
-  - Debe incluir:
-    - **Brand**: El título o nombre de la tienda.
-    - **Categorías Clickeables**: Listado de secciones o categorías seleccionables.
-    - **Estilización Opcional**: Usar una librería de estilos como bootstrap, materialize, etc.
+### Segunda Pre-Entrega
 
-#### CartWidget Component:
-- Crear el componente `CartWidget`.
-  - Mostrar un ícono de carrito y una notificación con un número hardcodeado.
-  - Incorporar dentro del componente `NavBar` para visibilidad constante.
+#### Navegación y Routing:
+- Implementación de `react-router-dom` para manejar la navegación en la aplicación.
+- Configuración de rutas en `App.js` con `BrowserRouter`:
+  - Ruta `'/'` para el `ItemListContainer`.
+  - Ruta `'/category/:id'` para filtrar ítems por categoría.
+  - Ruta `'/item/:id'` para el detalle de producto en `ItemDetailContainer`.
 
-#### ItemListContainer Component:
-- Implementar el componente `ItemListContainer`.
-  - Aceptar una prop `greeting` y mostrar el mensaje correspondiente.
-  - Importar en `App.js` y ubicar debajo de `NavBar.js`.
+#### Componentes Nuevos:
+- **ItemCount Component**: Incorporado en `ItemDetail.js` para gestionar la cantidad de productos a agregar al carrito.
+- **Item.js** e **ItemList.js**: Para mostrar productos en el `ItemListContainer`, obtenidos a través de promises para emular llamadas a la red.
+- **ItemDetailContainer** y **ItemDetail.js**: Para mostrar detalles de los productos seleccionados.
+
+#### Mejoras en Interactividad:
+- Sincronización de `ItemCount` con el estado interno de `ItemDetail`.
+- Botón "Terminar mi compra" en `ItemDetail` para navegar a un componente vacío de carrito de compras.
 
 **Formato de Entrega**:
-- [Link al último commit](#) en tu repositorio de Github. El nombre del commit debe ser “PreEntrega1+Apellido”.
+- [Link al último commit](#) en tu repositorio de Github. El nombre del commit debe ser “PreEntrega2+Apellido”.
 
-Las próximas preentregas y el proyecto final se actualizarán a medida que avance el desarrollo.  
-  
+Las próximas preentregas y el proyecto final se actualizarán a medida que avance el desarrollo.
+
 ## Configuración Técnica 🛠️
 
 Este proyecto utiliza **React** con **Vite**, ofreciendo un eficiente recargado de módulo en caliente (HMR, por sus siglas en inglés).
